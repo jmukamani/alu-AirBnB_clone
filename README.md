@@ -50,14 +50,15 @@ def __init__(self, *args, **kwargs) - Initialization of the base model
 def __str__(self) - String representation of the BaseModel class
 def save(self) - Updates the attribute updated_at with the current datetime
 def to_dict(self) - returns a dictionary containing all keys/values of the instance
-Classes inherited from Base Model:
 
+Classes inherited from Base Model:
 amenity.py
 city.py
 place.py
 review.py
 state.py
 user.py
+
 /models/engine directory contains File Storage class that handles JASON serialization and deserialization
 file_storage.py - serializes instances to a JSON file & deserializes back to instances
 def all(self) - returns the dictionary __objects
