@@ -137,8 +137,10 @@ Bugs
 
 No known bugs at this time.
 
-Authors
+Authors:
+
 Juliet Mukamani
+
 Caroline Gyrieh
 
 
