@@ -7,15 +7,16 @@ Retrieve an object from a file, a database etc...
 Do operations on objects (count, compute stats, etc...)
 Update attributes of an object
 Destroy an object
+
 Table of Content
 Environment
 Installation
 File Descriptions
 Usage
-Examples of use
 Bugs
 Authors
 License
+
 Environment
 SO: ubuntu 20.04 LTS
 IDE: vim, VSCode
