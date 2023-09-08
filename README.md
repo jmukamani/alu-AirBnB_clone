@@ -1,5 +1,5 @@
 AirBnB Clone - The Console
-The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
+The console is the first segment of the AirBnB project. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
 
 Functionalities of this command interpreter:
 Create a new object (ex: a new User or a new Place)
@@ -7,7 +7,6 @@ Retrieve an object from a file, a database etc...
 Do operations on objects (count, compute stats, etc...)
 Update attributes of an object
 Destroy an object
-
 Table of Content
 Environment
 Installation
@@ -17,7 +16,6 @@ Examples of use
 Bugs
 Authors
 License
-
 Environment
 SO: ubuntu 20.04 LTS
 IDE: vim, VSCode
@@ -28,13 +26,15 @@ Version control: git
 ssh
 
 Installation
-Clone this repository: git clone "https://github.com/jmukamani/alu-AirBnB_clone"
+Clone this repository: "https://github.com/jmukamani/alu-AirBnB_clone"
+
 Access AirBnb directory: cd AirBnB_clone
 Run hbnb(interactively): ./console and enter command
 Run hbnb(non-interactively): echo "<command>" | ./console.py
 
 File Descriptions
 console.py - the console contains the entry point of the command interpreter. List of commands this console current supports:
+
 EOF - exits console
 quit - exits console
 <emptyline> - overwrites default emptyline method and does nothing
@@ -43,7 +43,6 @@ destroy - Deletes an instance based on the class name and id (save the change in
 show - Prints the string representation of an instance based on the class name and id.
 all - Prints all string representation of all instances based or not on the class name.
 update - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
-
 models/ directory contains classes used for this project:
 base_model.py - The BaseModel class from which future classes will be derived
 
@@ -59,14 +58,12 @@ place.py
 review.py
 state.py
 user.py
-
 /models/engine directory contains File Storage class that handles JASON serialization and deserialization
 file_storage.py - serializes instances to a JSON file & deserializes back to instances
 def all(self) - returns the dictionary __objects
 def new(self, obj) - sets in __objects the obj with key .id
 def save(self) - serializes __objects to the JSON file (path: __file_path)
 def reload(self) - deserializes the JSON file to __objects
-
 /tests directory contains all unit test cases for this project:
 /test_models/test_base_model.py - Contains the TestBaseModel and TestBaseModelDocs classes
 
@@ -88,11 +85,9 @@ def test_diff_datetime_objs(self) - Test that two BaseModel instances have diffe
 
 def setUpClass(cls) - Set up for the doc tests
 def test_pep8_conformance_amenity(self) - Test that models/amenity.py conforms to PEP8
-def test_pep8_conformance_test_amenity(self) - Test that tests/
-test_models/test_amenity.py conforms to PEP8
+def test_pep8_conformance_test_amenity(self) - Test that tests/test_models/test_amenity.py conforms to PEP8
 def test_amenity_module_docstring(self) - Test for the amenity.py module docstring
 def test_amenity_class_docstring(self) - Test for the Amenity class docstring
-
 /test_models/test_city.py - Contains the TestCityDocs class:
 
 def setUpClass(cls) - Set up for the doc tests
@@ -128,7 +123,6 @@ def test_pep8_conformance_state(self) - Test that models/state.py conforms to PE
 def test_pep8_conformance_test_state(self) - Test that tests/test_models/test_state.py conforms to PEP8
 def test_state_module_docstring(self) - Test for the state.py module docstring
 def test_state_class_docstring(self) - Test for the State class docstring
-
 /test_models/user.py - Contains the TestUserDocs class:
 
 def setUpClass(cls) - Set up for the doc tests
@@ -139,3 +133,11 @@ def test_user_class_docstring(self) - Test for the User class docstring
 
 Bugs
 No known bugs at this time.
+
+Authors
+Juliet Mukamani
+Caroline Gyrieh
+
+
+
+
