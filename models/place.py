@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """ holds class Place"""
-from models.base_model import BaseModel,
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
