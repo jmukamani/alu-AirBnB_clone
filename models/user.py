@@ -10,6 +10,7 @@ import sqlalchemy
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 
+
 class User(BaseModel, Base):
     """Class that defines a user"""
     if models.storage_t == 'db':
@@ -45,7 +46,5 @@ class User(BaseModel, Base):
             else:
                 self.id = str(uuid.uuid4())
                 self.created_at = datetime.utcnow()
-                self.updated_at = self.created_at
-
-                          
+                self.updated_at = self.created_at                     
                           

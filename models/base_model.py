@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Defines all common attributes/methods for other classes."""
 
-from datetime import datetime 
+from datetime import datetime
 import models
 from os import getenv
 import sqlalchemy
@@ -17,7 +17,7 @@ else:
     Base = object
 
     class BaseModel:
-     """Class from which the future classes will be derived"""
+        """Class from which the future classes will be derived"""
     if models.storage_t == "db":
         id = Column(String(60), primary_key=True, nullable=False)
         created_at = Column(DateTime, default=datetime.utcnow())
@@ -47,7 +47,7 @@ else:
         def __str__(self):
             """Returns a string representation of the instance"""
             return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
-        
+      
         def save(self):
             """Updates updated_at with current time when instance is changed"""
             self.updated_at = datetime.utcnow()
@@ -65,7 +65,7 @@ else:
             if "_sa_instance_state" in new_dict:
                 del new_dict["_sa_instance_state"]
             return new_dict
-        
+
         def delete(self):
             """Delete the current instance from the storage"""
             models.storage.delete(self)

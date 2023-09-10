@@ -10,10 +10,11 @@ from sqlalchemy.orm import relationship
 if models.storage_t == "db":
     place_amenity = Table('place_amenity', Base.metadata,
                           Column('place_id', String(60),
-                                 ForeignKey('places.id', onupdate="CASCADE", ondelete="CASCADE"), primary_key=True),
+                                ForeignKey('places.id', onupdate="CASCADE", ondelete="CASCADE"), primary_key=True),
                           Column('amenity_id', String(60),
-                                 ForeignKey('amenities.id', onupdate="CASCADE", ondelete="CASCADE"), primary_key=True))
-    
+                                ForeignKey('amenities.id', onupdate="CASCADE", ondelete="CASCADE"), primary_key=True))
+
+
 class Place(BaseModel, Base):
     """Place class"""
     if models.storage_t == "db":
@@ -29,7 +30,8 @@ class Place(BaseModel, Base):
         latitude = Column(Float, nullable=True)
         longitude = Column(Float, nullable=True)
         amenity_ids = []
-        reviews = relationship("Review", backref="place", cascade="all, delete")
+        reviews = relationship("Review", backref="place",
+                               cascade="all, delete")
     else:
         city_id = ""
         user_id = ""
@@ -69,4 +71,3 @@ class Place(BaseModel, Base):
                 if amenity.place_id == self.id:
                     amenity_list.append(amenity)
             return amenity_list
-
