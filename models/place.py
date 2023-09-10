@@ -17,7 +17,8 @@ if models.storage_t == 'db':
                                 ForeignKey('amenities.id', onupdate='CASCADE',
                                         ondelete='CASCADE'),
                                 primary_key=True))
-    
+
+
 class Place(BaseModel, Base):
     """Place class"""
     if models.storage_t == "db":
@@ -33,7 +34,8 @@ class Place(BaseModel, Base):
         latitude = Column(Float, nullable=True)
         longitude = Column(Float, nullable=True)
         amenity_ids = []
-        reviews = relationship("Review", backref="place", cascade="all, delete")
+        reviews = relationship("Review", backref="place",
+                               cascade="all, delete")
     else:
         city_id = ""
         user_id = ""
