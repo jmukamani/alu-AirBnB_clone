@@ -1,11 +1,11 @@
 #!/usr/bin/python
 """ holds class Place"""
-from models.base_model import BaseModel,
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
     """Place class"""
-    place_name = ""
+    name = ""
     city_id = ""
     user_id = ""
     description = ""
