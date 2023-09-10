@@ -10,10 +10,13 @@ from models.state import State
 from models.user import User
 from models.base_model import BaseModel
 
-classes = {"Amenity": Amenity, "City": City, "Place": Place, "Review": Review, "State": State, "User": User}
+classes = {"Amenity": Amenity, "City": City, "Place": Place, "Review": Review, 
+        "State": State, "User": User}
 
 class FileStorage:
-    """serializes instances to a JSON file and deserializes JSON file to instances"""
+    """
+    serializes instances to a JSON file and deserializes JSON file to instances
+    """
 
     # string - path to the JSON file
     __file_path = "file.json"
@@ -29,7 +32,7 @@ class FileStorage:
                     new_dict[key] = value
             return new_dict
         return self.__objects
-    
+
     def new(self, obj):
         """sets in __objects the obj with key <obj class name>.id"""
         if obj is not None:
@@ -66,7 +69,9 @@ class FileStorage:
         self.reload()
 
     def get(self, cls, id):
-        """returns the object based on the class name and its ID, or None if not found"""
+        """
+        returns the object based on the class name and its ID, or None if not found
+        """
         if cls in classes:
             all_objs = self.all(cls)
             for obj in all_objs.values():

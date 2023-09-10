@@ -10,6 +10,7 @@ import uuid
 from datetime import datetime
 import time
 
+
 class City(BaseModel, Base):
     """Represents a city"""
     if models.storage_t == "db":

@@ -1,7 +1,7 @@
-#!/usr/bin/python3
+#!usr/bin/python3
 """Defines all common attributes/methods for other classes."""
 
-from datetime import datetime 
+from datetime import datetime
 import models
 from os import getenv
 import sqlalchemy
@@ -47,7 +47,7 @@ else:
         def __str__(self):
             """Returns a string representation of the instance"""
             return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
-        
+ 
         def save(self):
             """Updates updated_at with current time when instance is changed"""
             self.updated_at = datetime.utcnow()

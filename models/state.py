@@ -12,6 +12,7 @@ import uuid
 from datetime import datetime
 import time
 
+
 class State(BaseModel, Base):
     """Class that defines states"""
     if getenv("HBNB_TYPE_STORAGE") == "db":
@@ -21,6 +22,7 @@ class State(BaseModel, Base):
     else:
         name = ""
         cities = []
+
     def __init__(self, *args, **kwargs):
         """Instantiates a new state"""
         if kwargs:

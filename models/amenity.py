@@ -7,6 +7,7 @@ import sqlalchemy
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 
+
 class Amenity(BaseModel, Base):
     """Amenity class"""
     if models.storage_t == "db":
