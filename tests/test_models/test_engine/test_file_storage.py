@@ -1,4 +1,3 @@
-test_file_storage.py
 #!/usr/bin/python3
 """Defines unittests for models/engine/file_storage.py.
 
